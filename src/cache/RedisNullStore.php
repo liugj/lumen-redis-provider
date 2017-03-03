@@ -6,18 +6,18 @@ use Illuminate\Cache\NullStore;
 class RedisNullStore extends NullStore
 {
     /**
-     * __call 
-     * 
-     * @param mixed $method 
-     * @param mixed $parameters 
-     * 
+     * __call
+     *
+     * @param mixed $method
+     * @param mixed $parameters
+     *
      * @access public
-     * 
+     *
      * @return mixed
      */
     public function __call($method, $parameters)
     {
-        if (in_array($method,['mget', 'smembers'])){
+        if (in_array($method, ['mget', 'smembers'])) {
             return [];
         }
 
