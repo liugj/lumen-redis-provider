@@ -1,0 +1,22 @@
+{
+    "name": "liugj/lumen-redis-provider",
+    "description": "lumen redis Provider",
+    "keywords": ["Lumen", "Redis", "Provider"],
+    "authors": [
+        {
+            "name": "liugj",
+            "email": "liugj@126.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Liugj\\Providers\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
