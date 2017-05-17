@@ -2,8 +2,8 @@
 
 namespace Liugj\Providers;
 
-use Illuminate\Support\Arr;
 use Illuminate\Redis\RedisServiceProvider as ServiceProvider;
+use Illuminate\Support\Arr;
 
 class RedisServiceProvider extends ServiceProvider
 {
