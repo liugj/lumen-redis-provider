@@ -1,4 +1,5 @@
 <?php
+
 namespace Liugj\Providers;
 
 use Illuminate\Redis\RedisManager as Manager;
@@ -8,8 +9,8 @@ class RedisManager extends Manager
     /**
      * Create a new Redis manager instance.
      *
-     * @param  string  $driver
-     * @param  array  $config
+     * @param string $driver
+     * @param array  $config
      */
     public function __construct($driver, array $config)
     {
@@ -19,7 +20,8 @@ class RedisManager extends Manager
     /**
      * Get a Redis connection by name.
      *
-     * @param  string  $name
+     * @param string $name
+     *
      * @return \Illuminate\Redis\Connections\Connection
      */
     public function connection($name = null)
@@ -36,7 +38,7 @@ class RedisManager extends Manager
             $connection->ping();
         } catch (\Predis\Connection\ConnectionException $e) {
             \Log :: error($e->getMessage());
-            $connection =  new Cache\RedisNullStore;
+            $connection = new Cache\RedisNullStore();
         }
 
         return $this->connections[$name] = $connection;

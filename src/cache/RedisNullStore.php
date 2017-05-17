@@ -1,4 +1,5 @@
 <?php
+
 namespace Liugj\Providers\Cache;
 
 use Illuminate\Cache\NullStore;
@@ -6,12 +7,10 @@ use Illuminate\Cache\NullStore;
 class RedisNullStore extends NullStore
 {
     /**
-     * __call
+     * __call.
      *
      * @param mixed $method
      * @param mixed $parameters
-     *
-     * @access public
      *
      * @return mixed
      */
@@ -20,7 +19,5 @@ class RedisNullStore extends NullStore
         if (in_array($method, ['mget', 'smembers'])) {
             return [];
         }
-
-        return null;
     }
 }
